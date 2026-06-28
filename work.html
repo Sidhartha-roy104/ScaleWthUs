@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work – Portfolio | ScaleWthUs</title>
+  <meta name="description" content="Explore our portfolio of websites, AI automation agents, and cinematic video productions built for real businesses.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Page hero header */
+    #work-hero {
+      padding-top: 160px;
+      padding-bottom: 20px;
+      text-align: left;
+    }
+    #work-hero .work-hero-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    /* Full portfolio grid gets more breathing room on its own page */
+    #work-page-content {
+      background: linear-gradient(to bottom, transparent 0%, var(--deep) 100px, var(--deep) 100%);
+      padding-top: 48px;
+      padding-bottom: 120px;
+    }
+    /* Active nav link indicator */
+    .nav-links a { position: relative; }
+    .nav-links a.active-link {
+      color: var(--white) !important;
+      font-weight: 700;
+    }
+    .nav-links a.active-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px; left: 0;
+      width: 100%; height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated background grid -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <a href="index.html" class="logo" aria-label="ScaleWthUs Home">
+        <img src="C:/Users/siddh/.gemini/antigravity/scratch/ScaleWthUs/logoXname.jpeg" alt="ScaleWthUs" style="height: 36px; object-fit: contain; border-radius: 4px;">
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="work.html" class="active-link">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary" id="nav-cta-quote">Get a Quote →</a>
+      </div>
+
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html#services">Services</a>
+    <a href="work.html" style="color:var(--blue-light);">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="team.html">Team</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    <button id="theme-toggle-mobile" class="theme-btn-mobile" aria-label="Toggle light/dark theme">
+      Theme <span>🌙</span>
+    </button>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── PAGE HEADER ── -->
+    <section id="work-hero" class="reveal">
+      <div class="container">
+        <div class="work-hero-inner">
+          <div>
+            <div class="section-label">Portfolio</div>
+            <h1 class="section-title">Our Work</h1>
+            <p class="section-sub">Real projects. Measurable results. Across web, AI automation, and cinematic video.</p>
+          </div>
+          <a href="contact.html">Start a Project →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PORTFOLIO CONTENT ── -->
+    <section id="work-page-content" aria-label="Portfolio Projects">
+      <div class="container">
+
+        <!-- Filter buttons -->
+        <div class="work-filter reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all"   id="filter-all">All Projects</button>
+          <button class="filter-btn"        data-filter="web"   id="filter-web">Web Dev</button>
+          <button class="filter-btn"        data-filter="ai"    id="filter-ai">AI &amp; Automation</button>
+          <button class="filter-btn"        data-filter="video" id="filter-video">Video</button>
+        </div>
+
+        <!-- Work grid -->
+        <div class="work-grid" id="work-grid">
+
+          <article class="work-card reveal" data-cat="web">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/portfolio_hospital_clean_1782534823939.png" alt="LifeCare Hospital Website Screenshot" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>LifeCare Hospital Website</h3>
+              <p>Full patient-facing website with appointment booking, doctor directory, and mobile-optimized UX. 40% increase in online bookings.</p>
+              <div class="work-tags"><span class="tag">Web Dev</span><span class="tag">Healthcare</span><span class="tag">SEO</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" style="transition-delay:0.1s" data-cat="ai">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/portfolio_realestate_agent_clean_1782534839080.png" alt="n8n Real Estate Lead Agent Pipeline" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>Real Estate Lead Agent</h3>
+              <p>n8n AI agent that captures leads from WhatsApp, qualifies them via chat, and auto-books site visits into Google Calendar.</p>
+              <div class="work-tags"><span class="tag">AI Agent</span><span class="tag">n8n</span><span class="tag">Real Estate</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" style="transition-delay:0.2s" data-cat="video">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/portfolio_villa_clean_1782534850911.png" alt="Luxury Villa Drone Tour Still" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>Luxury Villa Drone Tour</h3>
+              <p>Cinematic aerial showcase for a premium residential project. 500K+ views across platforms, sold out within 3 weeks of launch.</p>
+              <div class="work-tags"><span class="tag">Drone</span><span class="tag">Video</span><span class="tag">Real Estate</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-cat="web">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/portfolio_academy_clean_1782534862215.png" alt="BrightPath Academy Portal Interface" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>BrightPath Academy Portal</h3>
+              <p>School admission management portal with automated parent notifications, fee tracking, and performance dashboards.</p>
+              <div class="work-tags"><span class="tag">Web App</span><span class="tag">Education</span><span class="tag">Automation</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" style="transition-delay:0.1s" data-cat="ai">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/gallery_inventory_bot_1782533339279.png" alt="Retail Inventory AI Bot Dashboard" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>Retail Inventory AI Bot</h3>
+              <p>WhatsApp bot for a retail chain that tracks stock, auto-orders low inventory items, and sends daily sales summaries to the owner.</p>
+              <div class="work-tags"><span class="tag">AI Bot</span><span class="tag">Retail</span><span class="tag">n8n</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" style="transition-delay:0.2s" data-cat="video">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/gallery_restaurant_film_1782533304481.png" alt="Restaurant Brand Film Cinematic Shot" loading="lazy" style="object-position: center 20%;">
+            </div>
+            <div class="work-card-body">
+              <h3>Restaurant Brand Film</h3>
+              <p>Premium brand video for a fine dining restaurant — kitchen process, ambiance, and chef story. Used across Instagram and Google Ads.</p>
+              <div class="work-tags"><span class="tag">Video</span><span class="tag">Branding</span><span class="tag">F&amp;B</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-cat="ai">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/gallery_ai_workflow_1782533293841.png" alt="AI Workflow Automation Dashboard" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>AI Workflow Automation</h3>
+              <p>End-to-end automation pipeline integrating CRM, email, and social channels for a B2B SaaS company, saving 60+ manual hours per week.</p>
+              <div class="work-tags"><span class="tag">n8n</span><span class="tag">CRM</span><span class="tag">SaaS</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" style="transition-delay:0.1s" data-cat="video">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/gallery_drone_villa_1782533282996.png" alt="Aerial Drone Footage Real Estate" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>Aerial Estate Showcase</h3>
+              <p>Multi-drone cinematic campaign for a luxury gated community. Delivered 4K footage for social, print, and hoarding displays.</p>
+              <div class="work-tags"><span class="tag">Drone</span><span class="tag">4K</span><span class="tag">Real Estate</span></div>
+            </div>
+          </article>
+
+          <article class="work-card reveal" style="transition-delay:0.2s" data-cat="web">
+            <div class="work-card-thumb">
+              <img src="C:/Users/siddh/.gemini/antigravity/brain/b21daf0e-16be-4e3e-83ef-98e0feb50d81/gallery_hospital_web_1782533272634.png" alt="Hospital Web Platform Screenshot" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <h3>Multi-Specialty Hospital Platform</h3>
+              <p>Full-stack hospital web platform with doctor search, department listings, live chat triage, and appointment management.</p>
+              <div class="work-tags"><span class="tag">Web Dev</span><span class="tag">Healthcare</span><span class="tag">UX</span></div>
+            </div>
+          </article>
+
+        </div><!-- /#work-grid -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="ScaleWthUs Home">
+            <div class="logo-mark" aria-hidden="true" style="border: none; background: transparent;">
+              <img src="C:/Users/siddh/.gemini/antigravity/scratch/ScaleWthUs/cropped_logo.jpeg" alt="Logo Mark" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+            <img src="C:/Users/siddh/.gemini/antigravity/scratch/ScaleWthUs/logoXname.jpeg" alt="ScaleWthUs" style="height: 36px; object-fit: contain; border-radius: 4px;">
+          </a>
+          <p>Your end-to-end digital growth partner — websites, AI automation, and cinematic video production.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="index.html#services">Web Development</a>
+          <a href="index.html#services">AI &amp; Automation</a>
+          <a href="index.html#services">Video Production</a>
+          <a href="index.html#services">Drone Filming</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="index.html#about">About Us</a>
+          <a href="team.html">Our Team</a>
+          <a href="work.html">Portfolio</a>
+          <a href="index.html#blog">Blog</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Get in Touch</h5>
+          <a href="mailto:hello@scalewthus.com">hello@scalewthus.com</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a href="contact.html">Get a Quote</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 ScaleWthUs. All rights reserved.</span>
+        <div style="display:flex;gap:20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/reveal.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/portfolio-filter.js" defer></script>
+
+</body>
+</html>

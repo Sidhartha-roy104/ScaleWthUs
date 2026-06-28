@@ -1,0 +1,180 @@
+<!-- ============================================================
+     sections/contact.html — ScaleWthUs
+     Contact section with info items + social links.
+     Quote / Get a Quote form section with validation fields.
+     ============================================================ -->
+
+<!-- QUOTE / GET A QUOTE FORM -->
+<section id="quote" class="section" aria-labelledby="quote-title">
+  <div class="container">
+    <div class="quote-wrapper">
+
+      <!-- Left: Info + perks -->
+      <div class="reveal">
+        <div class="section-label">Get in Touch</div>
+        <h2 id="quote-title">Ready to Scale?<br>Let's Talk.</h2>
+        <p>
+          Tell us about your project and we'll come back with a custom proposal,
+          clear timeline, and transparent pricing within 24 hours.
+        </p>
+        <div class="quote-perks">
+          <div class="quote-perk">Free 30-min discovery call</div>
+          <div class="quote-perk">No obligation quote</div>
+          <div class="quote-perk">Response within 24 hours</div>
+          <div class="quote-perk">Clear deliverables &amp; milestones</div>
+          <div class="quote-perk">Works with any budget range</div>
+        </div>
+      </div>
+
+      <!-- Right: Quote form -->
+      <div class="reveal" style="transition-delay:0.15s">
+        <form class="quote-form" id="quote-form" novalidate aria-label="Request a quote form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-name">Your Name *</label>
+              <input type="text" id="q-name" name="name" placeholder="Ramesh Iyer" required>
+            </div>
+            <div class="form-group">
+              <label for="q-email">Email Address *</label>
+              <input type="email" id="q-email" name="email" placeholder="hello@yourcompany.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="q-phone">Phone / WhatsApp</label>
+              <input type="tel" id="q-phone" name="phone" placeholder="+91 98765 43210">
+            </div>
+            <div class="form-group">
+              <label for="q-service">Service Needed *</label>
+              <select id="q-service" name="service" required>
+                <option value="" disabled selected>Choose a service…</option>
+                <option value="web">Web Development</option>
+                <option value="ai">AI &amp; Automation</option>
+                <option value="video">Video Production</option>
+                <option value="combo">Full Package (Web + AI + Video)</option>
+                <option value="other">Other / Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="q-budget">Budget Range</label>
+            <select id="q-budget" name="budget">
+              <option value="" disabled selected>Select a range…</option>
+              <option value="10k">Under ₹10,000</option>
+              <option value="25k">₹10,000 – ₹25,000</option>
+              <option value="50k">₹25,000 – ₹50,000</option>
+              <option value="1l">₹50,000 – ₹1,00,000</option>
+              <option value="1l+">₹1,00,000+</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="q-message">Project Details *</label>
+            <textarea id="q-message" name="message" rows="4"
+              placeholder="Briefly describe what you need — we'll tailor our proposal to match."
+              required></textarea>
+          </div>
+
+          <!-- [DEMO CONTENT] Wire up to EmailJS / Formspree / backend API -->
+          <button type="submit" class="form-submit" id="quote-submit-btn">
+            Send My Request →
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT INFO -->
+<section id="contact" class="section" aria-labelledby="contact-title">
+  <div class="container">
+
+    <div style="margin-bottom:60px;" class="reveal">
+      <div class="section-label">Contact Us</div>
+      <h2 class="section-title" id="contact-title">We're Here to Help</h2>
+      <p class="section-sub">
+        Reach out any time — we typically respond within a few hours during business days.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Contact info items -->
+      <div class="contact-info reveal">
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <!-- [DEMO CONTENT] Replace with real email -->
+            <p><a href="mailto:hello@scalewthus.com">hello@scalewthus.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div>
+            <h4>WhatsApp / Phone</h4>
+            <!-- [DEMO CONTENT] Replace with real number -->
+            <p><a href="https://wa.me/919876543210" target="_blank" rel="noopener">+91 98765 43210</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <!-- [DEMO CONTENT] Replace with real address -->
+            <p>Hyderabad, Telangana, India<br>Remote-friendly — we work with clients globally.</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">🕐</div>
+          <div>
+            <h4>Business Hours</h4>
+            <!-- [DEMO CONTENT] Replace with real hours -->
+            <p>Mon – Sat: 9:00 AM – 7:00 PM IST<br>WhatsApp available 24/7</p>
+          </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="contact-socials">
+          <!-- [DEMO CONTENT] Replace href with real profile URLs -->
+          <a href="https://www.linkedin.com/company/scalewthus" target="_blank" rel="noopener" class="contact-social" aria-label="LinkedIn">in</a>
+          <a href="https://www.instagram.com/scalewthus" target="_blank" rel="noopener" class="contact-social" aria-label="Instagram">IG</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="contact-social" aria-label="WhatsApp">WA</a>
+          <a href="https://www.youtube.com/@scalewthus" target="_blank" rel="noopener" class="contact-social" aria-label="YouTube">YT</a>
+        </div>
+
+      </div>
+
+      <!-- Contact form (separate from quote form) -->
+      <div class="reveal" style="transition-delay:0.15s">
+        <form id="contact-form" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="c-name">Your Name *</label>
+            <input type="text" id="c-name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="c-email">Email Address *</label>
+            <input type="email" id="c-email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="c-message">Message *</label>
+            <textarea id="c-message" name="message" rows="5"
+              placeholder="How can we help?" required></textarea>
+          </div>
+          <!-- [DEMO CONTENT] Wire up to real API -->
+          <button type="submit" class="form-submit" id="contact-submit-btn">Send Message →</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>

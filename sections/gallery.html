@@ -1,0 +1,91 @@
+<!-- ============================================================
+     sections/gallery.html — ScaleWthUs
+     Visual gallery with real AI-generated images for each project.
+     Images use absolute positioning + object-fit:cover to fill cells.
+     Replace src paths with relative paths (e.g. images/gallery_*.png)
+     when deploying to a web server.
+     ============================================================ -->
+
+<!-- GALLERY -->
+<section id="gallery" class="section" aria-labelledby="gallery-title">
+  <div class="container">
+
+    <!-- Header -->
+    <div style="margin-bottom:48px;" class="reveal">
+      <div class="section-label">Visual Work</div>
+      <h2 class="section-title" id="gallery-title">Work Gallery</h2>
+      <p class="section-sub">
+        A snapshot of websites, automations, and cinematic productions
+        we've delivered for our clients.
+      </p>
+    </div>
+
+    <div class="gallery-grid" role="list">
+
+      <!-- Item 1: Hospital Website (spans 2 cols) -->
+      <div class="gallery-item reveal" role="listitem" aria-label="LifeCare Hospital Website">
+        <img src="images/gallery_hospital_web.png"
+             alt="LifeCare Hospital Website UI" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;">
+        <div class="gallery-overlay">LifeCare Hospital Website</div>
+      </div>
+
+      <!-- Item 2: Drone Villa Shoot -->
+      <div class="gallery-item reveal" role="listitem" aria-label="Aerial Villa Shoot" style="transition-delay:0.05s;">
+        <img src="images/gallery_drone_villa.png"
+             alt="Luxury Villa Aerial Drone Shot" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.9;">
+        <div class="gallery-overlay">Aerial Villa Shoot</div>
+      </div>
+
+      <!-- Item 3: AI Workflow -->
+      <div class="gallery-item reveal" role="listitem" aria-label="Real Estate AI Workflow" style="transition-delay:0.1s;">
+        <img src="images/gallery_ai_workflow.png"
+             alt="n8n AI Workflow Automation Dashboard" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.9;">
+        <div class="gallery-overlay">Real Estate AI Workflow</div>
+      </div>
+
+      <!-- Item 4: Restaurant Film -->
+      <div class="gallery-item reveal" role="listitem" aria-label="Restaurant Brand Film" style="transition-delay:0.15s;">
+        <img src="images/gallery_restaurant_film.png"
+             alt="Cinematic Restaurant Brand Film" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.9;">
+        <div class="gallery-overlay">Restaurant Brand Film</div>
+      </div>
+
+      <!-- Item 5: Academy Portal (spans 2 cols) -->
+      <div class="gallery-item reveal" role="listitem" aria-label="BrightPath Academy Portal" style="transition-delay:0.2s;">
+        <img src="images/gallery_academy_portal.png"
+             alt="BrightPath Academy Student Portal" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;">
+        <div class="gallery-overlay">BrightPath Academy Portal</div>
+      </div>
+
+      <!-- Item 6: Social Reel -->
+      <div class="gallery-item reveal" role="listitem" aria-label="Social Reel Production" style="transition-delay:0.25s;">
+        <img src="images/gallery_social_reel.png"
+             alt="Social Media Video Production Studio" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.9;">
+        <div class="gallery-overlay">Social Reel Production</div>
+      </div>
+
+      <!-- Item 7: Inventory AI Bot -->
+      <div class="gallery-item reveal" role="listitem" aria-label="Inventory AI Bot" style="transition-delay:0.3s;">
+        <img src="images/gallery_inventory_bot.png"
+             alt="Retail Inventory AI Bot Dashboard" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.9;">
+        <div class="gallery-overlay">Inventory AI Bot</div>
+      </div>
+
+      <!-- Item 8: Corporate Event -->
+      <div class="gallery-item reveal" role="listitem" aria-label="Corporate Event Coverage" style="transition-delay:0.35s;">
+        <img src="images/gallery_corporate_event.png"
+             alt="Corporate Event Video Production" loading="lazy"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.9;">
+        <div class="gallery-overlay">Corporate Event Coverage</div>
+      </div>
+
+    </div>
+  </div>
+</section>

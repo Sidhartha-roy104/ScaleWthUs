@@ -1,0 +1,103 @@
+/* ==========================================================================
+   services.css — ScaleWthUs
+   Styles for the Services section cards and feature list items
+   ========================================================================== */
+
+/* ===== SERVICES SECTION ===== */
+#services { position: relative; }
+
+.services-header { margin-bottom: 60px; }
+
+/* ===== SERVICES GRID ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== SERVICE CARD ===== */
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Blue top-border accent on hover */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+.service-card:hover {
+  border-color: rgba(26, 107, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-icon {
+  width: 56px; height: 56px;
+  border-radius: 12px;
+  background: var(--blue-glow);
+  border: 1px solid rgba(26, 107, 255, 0.2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  transition: var(--transition);
+}
+.service-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--blue-light);
+  stroke-width: 2px;
+  transition: var(--transition);
+}
+.service-card:hover .service-icon {
+  border-color: rgba(26, 107, 255, 0.5);
+  background: rgba(26, 107, 255, 0.25);
+}
+.service-card:hover .service-icon svg {
+  color: var(--white);
+  transform: scale(1.08);
+}
+
+/* ===== SERVICE CARD TEXT ===== */
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.service-card p {
+  font-size: 14px;
+  color: var(--gray-2);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* ===== SERVICE FEATURE LIST ===== */
+.service-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-feat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gray-2);
+}
+.service-feat::before {
+  content: '→';
+  color: var(--blue);
+  font-weight: 700;
+}

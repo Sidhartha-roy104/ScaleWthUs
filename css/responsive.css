@@ -1,0 +1,176 @@
+/* ==========================================================================
+   responsive.css — ScaleWthUs
+   All media queries for tablet and mobile breakpoints
+   ========================================================================== */
+
+/* ===== TABLET — max-width: 1024px ===== */
+@media (max-width: 1024px) {
+  #hero .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  /* Multi-column → 2-column */
+  .services-grid,
+  .work-grid,
+  .blog-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Client domains: 5 → 3 */
+  .client-domains {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Team: 4 → 2 */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Footer: 4 → 2 */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Hide hero badge cards / right-hand logo on smaller screens */
+  .hero-badge,
+  .hero-logo-right {
+    display: none;
+  }
+}
+
+/* ===== MOBILE — max-width: 768px ===== */
+@media (max-width: 768px) {
+  /* Navigation: hide links, show hamburger */
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* All grids → single column */
+  .services-grid,
+  .work-grid,
+  .blog-grid,
+  .testimonials-grid,
+  .client-domains {
+    grid-template-columns: 1fr;
+  }
+
+  /* Two-column layouts → single column */
+  .wwd-grid,
+  .why-grid,
+  .about-grid,
+  .contact-grid,
+  .quote-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Team: keep 2-column on mobile */
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Gallery: 2-column on mobile, reset spans */
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  /* Footer: full single column */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Hero stats: wrap on small screens */
+  .hero-stats {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  /* Quote form: single column inputs */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Why visual: keep 2-column */
+  .why-visual {
+    grid-template-columns: 1fr 1fr;
+  }
+  .why-stat-card:first-child {
+    grid-column: span 2;
+  }
+
+  /* Chatbot: narrower on mobile */
+  #chatbot-window {
+    width: 320px;
+    right: 16px;
+  }
+
+  /* Reduce section vertical padding */
+  .section {
+    padding: 64px 0;
+  }
+
+  /* Ticker font */
+  .ticker-item {
+    font-size: 12px;
+  }
+
+  /* Blog header spacing */
+  .blog-grid {
+    gap: 16px;
+  }
+}
+
+/* ===== SMALL MOBILE — max-width: 480px ===== */
+@media (max-width: 480px) {
+  /* Team: single column on very small screens */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery: single column */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  /* Hero CTA buttons: full width */
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Chatbot: full width minus margins */
+  #chatbot-window {
+    width: calc(100vw - 32px);
+    right: 16px;
+  }
+
+  /* Footer: hide extra columns */
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,149 @@
+/* ==========================================================================
+   portfolio.css — ScaleWthUs
+   Styles for the Work / Projects section, filter buttons, and work cards
+   ========================================================================== */
+
+/* ===== WORK / PORTFOLIO SECTION ===== */
+#work { background: var(--deep); }
+
+/* ===== PORTFOLIO FILTER BUTTONS ===== */
+.work-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--gray-2);
+  font-family: var(--font-body);
+}
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+}
+
+/* ===== WORK GRID ===== */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== WORK CARD ===== */
+.work-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border-color: rgba(26, 107, 255, 0.3);
+}
+
+/* ===== CARD THUMBNAIL ===== */
+.work-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.work-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.work-card:hover .work-card-thumb img {
+  transform: scale(1.05);
+}
+
+/* ===== CARD BODY ===== */
+.work-card-body { padding: 24px; }
+.work-card-body h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.work-card-body p  { font-size: 13px; color: var(--gray-2); margin-bottom: 16px; }
+
+/* ===== TAG ROW ===== */
+.work-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ===== HIDDEN STATE (for filter) ===== */
+.work-card.hidden {
+  display: none;
+}
+
+/* ===== GALLERY SECTION ===== */
+#gallery {}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Each cell locks to 16:9 aspect ratio — consistent, professional */
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  position: relative;
+  aspect-ratio: 16 / 9;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.gallery-item:hover {
+  border-color: rgba(26, 107, 255, 0.5);
+  box-shadow: 0 12px 40px rgba(26, 107, 255, 0.15);
+  transform: translateY(-3px);
+}
+.gallery-item:nth-child(1) { grid-column: span 2; }
+.gallery-item:nth-child(5) { grid-column: span 2; }
+
+/* ===== GALLERY IMAGE — fills cell, centres the best part ===== */
+.gallery-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* fills the cell cleanly */
+  object-position: center; /* centres the subject */
+  display: block;
+  transition: transform 0.5s ease;
+}
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+
+/* ===== GALLERY OVERLAY ===== */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 107, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }

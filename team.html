@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team - ScaleWthUs</title>
+  <meta name="description" content="A compact team of specialists who've worked across web, AI, and media — now under one roof.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* Custom subpage layout styles */
+    #team-hero {
+      padding-top: 160px;
+      padding-bottom: 60px;
+      text-align: center;
+      background: transparent;
+    }
+    #team-page-content {
+      background: linear-gradient(to bottom, transparent 0%, var(--deep) 120px, var(--deep) 100%);
+      padding-top: 60px;
+      padding-bottom: 120px;
+    }
+    /* Set Team link active in navbar */
+    .nav-links a {
+      position: relative;
+    }
+    .nav-links a.active-link {
+      color: var(--white) !important;
+      font-weight: 700;
+    }
+    .nav-links a.active-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px; left: 0;
+      width: 100%; height: 2px;
+      background: var(--blue);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Animated background grid (decorative) -->
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="ScaleWthUs Home">
+        <img src="C:/Users/siddh/.gemini/antigravity/scratch/ScaleWthUs/logoXname.jpeg" alt="ScaleWthUs" style="height: 36px; object-fit: contain; border-radius: 4px;">
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="team.html" class="active-link">Team</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Desktop CTA button -->
+      <div class="nav-cta">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle light/dark theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <a href="contact.html" class="btn btn-primary" id="nav-cta-quote">Get a Quote →</a>
+      </div>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Mobile navigation overlay -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html#services">Services</a>
+    <a href="work.html">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="team.html" style="color:var(--blue-light);">Team</a>
+    <a href="index.html#blog">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    <button id="theme-toggle-mobile" class="theme-btn-mobile" aria-label="Toggle light/dark theme">
+      Theme <span>🌙</span>
+    </button>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── TEAM HERO ── -->
+    <section id="team-hero" class="reveal">
+      <div class="container">
+        <div class="section-label">The People</div>
+        <h1 class="section-title">Meet the Team</h1>
+        <p class="section-sub" style="margin:0 auto;text-align:center;">A compact team of specialists who've worked across web, AI, and media — now under one roof.</p>
+      </div>
+    </section>
+
+    <!-- ── TEAM CONTENT BLOCK ── -->
+    <section id="team-page-content" aria-label="Team Grid">
+      <div class="container">
+<div class="team-grid" style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:60px;
+">
+
+  <!-- DHEERAJ -->
+  <div class="team-card reveal">
+    <div class="team-avatar">👨‍💼</div>
+    <h4>L. Dheeraj</h4>
+    <div class="team-role">Founder | Client Relations & SEO Specialist</div>
+    <p class="team-bio">
+      Client Relationship Management • Project Planning • SEO Strategy &
+      Website Optimization • Business Consultation
+    </p>
+  </div>
+
+  <!-- MANOHAR -->
+  <div class="team-card reveal" style="transition-delay:.05s">
+    <div class="team-avatar">📈</div>
+    <h4>Manohar</h4>
+    <div class="team-role">Meta Ads Manager</div>
+    <p class="team-bio">
+      Facebook Ads • Instagram Ads • Campaign Strategy • Lead Generation •
+      Performance Optimization
+    </p>
+  </div>
+
+  <!-- HARSHA -->
+  <div class="team-card reveal" style="transition-delay:.1s">
+    <div class="team-avatar">📱</div>
+    <h4>Harsha</h4>
+    <div class="team-role">Social Media Manager</div>
+    <p class="team-bio">
+      Social Media Strategy • Content Planning • Account Management •
+      Audience Engagement • Brand Growth
+    </p>
+  </div>
+
+  <!-- SAMEERA -->
+  <div class="team-card reveal" style="transition-delay:.15s">
+    <div class="team-avatar">✍️</div>
+    <h4>Sameera</h4>
+    <div class="team-role">Content Writer</div>
+    <p class="team-bio">
+      Website Content Writing • Social Media Captions • Ad Copywriting •
+      Blog & Article Writing • Brand Storytelling • Content Strategy
+    </p>
+  </div>
+
+  <!-- TEJA -->
+  <div class="team-card reveal" style="transition-delay:.2s">
+    <div class="team-avatar">🎨</div>
+    <h4>Teja</h4>
+    <div class="team-role">Graphic Designer</div>
+    <p class="team-bio">
+      Social Media Creatives • Brand Design • Canva • Adobe Photoshop
+    </p>
+  </div>
+
+  <!-- ABHI -->
+  <div class="team-card reveal" style="transition-delay:.25s">
+    <div class="team-avatar">🎬</div>
+    <h4>Abhi</h4>
+    <div class="team-role">Video Editor</div>
+    <p class="team-bio">
+      Promotional Videos • Reels & Short-form Content • Adobe Premiere Pro •
+      CapCut Editing
+    </p>
+  </div>
+
+  <!-- SRIKHAR -->
+  <div class="team-card reveal" style="transition-delay:.3s">
+    <div class="team-avatar">🎥</div>
+    <h4>Srikhar</h4>
+    <div class="team-role">Cinematographer & Video Editor</div>
+    <p class="team-bio">
+      Professional Videography • Cinematic Content Creation • Video Production •
+      Creative Storytelling
+    </p>
+  </div>
+
+</div>
+
+    </section>
+    
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="ScaleWthUs Home">
+            <div class="logo-mark" aria-hidden="true" style="border: none; background: transparent;">
+              <img src="C:/Users/siddh/.gemini/antigravity/scratch/ScaleWthUs/cropped_logo.jpeg" alt="Logo Mark" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+            <img src="C:/Users/siddh/.gemini/antigravity/scratch/ScaleWthUs/logoXname.jpeg" alt="ScaleWthUs" style="height: 36px; object-fit: contain; border-radius: 4px;">
+          </a>
+          <p>Your end-to-end digital growth partner — websites, AI automation, and cinematic video production.</p>
+        </div>
+
+        <!-- Services column -->
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="index.html#services">Web Development</a>
+          <a href="index.html#services">AI &amp; Automation</a>
+          <a href="index.html#services">Video Production</a>
+          <a href="index.html#services">Drone Filming</a>
+        </div>
+
+        <!-- Company column -->
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="index.html#about">About Us</a>
+          <a href="team.html">Our Team</a>
+          <a href="index.html#work">Portfolio</a>
+          <a href="index.html#blog">Blog</a>
+        </div>
+
+        <!-- Contact column -->
+        <div class="footer-col">
+          <h5>Get in Touch</h5>
+          <a href="mailto:hello@scalewthus.com">hello@scalewthus.com</a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a href="contact.html">Get a Quote</a>
+        </div>
+
+      </div><!-- /.footer-grid -->
+
+      <div class="footer-bottom">
+        <span>© 2025 ScaleWthUs. All rights reserved.</span>
+        <div style="display:flex;gap:20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/reveal.js"></script>
+
+</body>
+</html>

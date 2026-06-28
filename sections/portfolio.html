@@ -1,0 +1,129 @@
+<!-- ============================================================
+     sections/portfolio.html — ScaleWthUs
+     Our Work grid section with live interactive category filters.
+     Includes cards referencing clean, simple, un-cropped images.
+     ============================================================ -->
+
+<!-- PORTFOLIO / WORK -->
+<section id="work" class="section" aria-labelledby="work-title">
+  <div class="container">
+
+    <!-- Header & CTA -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;" class="reveal">
+      <div>
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title" id="work-title">Our Work</h2>
+      </div>
+      <a href="#quote" class="btn btn-outline" id="portfolio-start-btn">Start a Project →</a>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="work-filter reveal" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all"   id="filter-all">All Projects</button>
+      <button class="filter-btn"        data-filter="web"   id="filter-web">Web Dev</button>
+      <button class="filter-btn"        data-filter="ai"    id="filter-ai">AI &amp; Automation</button>
+      <button class="filter-btn"        data-filter="video" id="filter-video">Video</button>
+    </div>
+
+    <!-- Project Cards Grid -->
+    <div class="work-grid" id="work-grid">
+
+      <!-- Project 1: Web Dev -->
+      <article class="work-card reveal" data-cat="web">
+        <div class="work-card-thumb">
+          <img src="images/portfolio_hospital_clean.png" alt="LifeCare Hospital Website Screenshot" loading="lazy">
+        </div>
+        <div class="work-card-body">
+          <h3>LifeCare Hospital Website</h3>
+          <p>Full patient-facing website with appointment booking, doctor directory, and mobile-optimized UX. 40% increase in online bookings.</p>
+          <div class="work-tags">
+            <span class="tag">Web Dev</span>
+            <span class="tag">Healthcare</span>
+            <span class="tag">SEO</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: AI Agent -->
+      <article class="work-card reveal" style="transition-delay:0.1s" data-cat="ai">
+        <div class="work-card-thumb">
+          <img src="images/portfolio_realestate_agent_clean.png" alt="n8n Real Estate Lead Agent Pipeline" loading="lazy">
+        </div>
+        <div class="work-card-body">
+          <h3>Real Estate Lead Agent</h3>
+          <p>n8n AI agent that captures leads from WhatsApp, qualifies them via chat, and auto-books site visits into Google Calendar.</p>
+          <div class="work-tags">
+            <span class="tag">AI Agent</span>
+            <span class="tag">n8n</span>
+            <span class="tag">Real Estate</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Drone Tour -->
+      <article class="work-card reveal" style="transition-delay:0.2s" data-cat="video">
+        <div class="work-card-thumb">
+          <img src="images/portfolio_villa_clean.png" alt="Luxury Villa Drone Tour Still" loading="lazy">
+        </div>
+        <div class="work-card-body">
+          <h3>Luxury Villa Drone Tour</h3>
+          <p>Cinematic aerial showcase for a premium residential project. 500K+ views across platforms, sold out within 3 weeks of launch.</p>
+          <div class="work-tags">
+            <span class="tag">Drone</span>
+            <span class="tag">Video</span>
+            <span class="tag">Real Estate</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: Web Dev -->
+      <article class="work-card reveal" data-cat="web">
+        <div class="work-card-thumb">
+          <img src="images/portfolio_academy_clean.png" alt="BrightPath Academy Portal Interface" loading="lazy">
+        </div>
+        <div class="work-card-body">
+          <h3>BrightPath Academy Portal</h3>
+          <p>School admission management portal with automated parent notifications, fee tracking, and performance dashboards.</p>
+          <div class="work-tags">
+            <span class="tag">Web App</span>
+            <span class="tag">Education</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5: AI Agent -->
+      <article class="work-card reveal" style="transition-delay:0.1s" data-cat="ai">
+        <div class="work-card-thumb">
+          <img src="images/gallery_inventory_bot.png" alt="Retail Inventory AI Bot Dashboard" loading="lazy">
+        </div>
+        <div class="work-card-body">
+          <h3>Retail Inventory AI Bot</h3>
+          <p>WhatsApp bot for a retail chain that tracks stock, auto-orders low inventory items, and sends daily sales summaries to the owner.</p>
+          <div class="work-tags">
+            <span class="tag">AI Bot</span>
+            <span class="tag">Retail</span>
+            <span class="tag">n8n</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 6: Restaurant Film -->
+      <article class="work-card reveal" style="transition-delay:0.2s" data-cat="video">
+        <div class="work-card-thumb">
+          <img src="images/gallery_restaurant_film.png" alt="Restaurant Brand Film Cinematic Shot" loading="lazy" style="object-position: center 20%;">
+        </div>
+        <div class="work-card-body">
+          <h3>Restaurant Brand Film</h3>
+          <p>Premium brand video for a fine dining restaurant — kitchen process, ambiance, and chef story. Used across Instagram and Google Ads.</p>
+          <div class="work-tags">
+            <span class="tag">Video</span>
+            <span class="tag">Branding</span>
+            <span class="tag">F&amp;B</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>

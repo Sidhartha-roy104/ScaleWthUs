@@ -1,0 +1,195 @@
+/* ==========================================================================
+   hero.css — ScaleWthUs
+   Styles for the hero section, stats, badge cards, and eyebrow
+   ========================================================================== */
+
+/* ===== HERO SECTION ===== */
+#hero {
+  min-height: 82vh;    /* slightly shorter viewport height to pull ticker section upwards */
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 110px;  /* offset navbar space cleanly */
+  padding-bottom: 32px; /* tightens bottom space to bring ticker closer */
+}
+#hero .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+/* ===== HERO GLOW ===== */
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(26, 107, 255, 0.18) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ===== HERO CONTENT ===== */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+}
+
+/* ===== EYEBROW ===== */
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.hero-eyebrow-line {
+  width: 32px; height: 2px;
+  background: var(--blue);
+}
+.hero-eyebrow span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+/* ===== HERO TITLE ===== */
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7vw, 82px);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+}
+.hero-title .accent { color: var(--blue); }
+.hero-title .underline-wrap {
+  position: relative;
+  display: inline-block;
+}
+.hero-title .underline-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 3px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+/* ===== HERO DESCRIPTION ===== */
+.hero-desc {
+  font-size: 18px;
+  color: var(--gray-2);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+}
+
+/* ===== HERO ACTION BUTTONS ===== */
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px; /* reduced from 64px to tighten gap before stats */
+}
+
+/* ===== HERO STATISTICS ===== */
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  padding-top: 24px; /* reduced from 40px to tighten padding */
+  border-top: 1px solid var(--border);
+}
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white);
+}
+.stat-num span { color: var(--blue); }
+.stat-label {
+  font-size: 13px;
+  color: var(--gray-3);
+  margin-top: 2px;
+}
+
+/* ===== HERO FLOATING BADGE CARDS ===== */
+.hero-badge {
+  position: absolute;
+  right: 0; top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.badge-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  min-width: 200px;
+  transition: var(--transition);
+}
+.badge-card:hover {
+  border-color: rgba(26, 107, 255, 0.3);
+  transform: translateX(-4px);
+}
+.badge-card-icon  { font-size: 28px; margin-bottom: 8px; }
+.badge-card-title { font-weight: 700; font-size: 15px; }
+.badge-card-sub   { font-size: 12px; color: var(--gray-3); }
+
+/* ===== HERO FLOATING LARGE LOGO (Desktop only) ===== */
+.hero-logo-right {
+  position: relative; /* relative positioning to stay safely inside flexbox flow */
+  width: 280px;      /* scaled down slightly for cleaner desktop balance */
+  height: 280px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: var(--transition);
+  flex-shrink: 0; /* prevent shrinking on smaller desktop widths */
+  padding: 32px;  /* inner padding frame to keep logo graphics floating inside card borders */
+  align-self: center;     /* place logo in the vertically centered marked area */
+  margin-top: -40px;      /* offset slightly upward to center perfectly next to paragraph/buttons */
+}
+.hero-logo-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* contain logo drawing without cropping/bleeding */
+  transition: var(--transition);
+}
+.hero-logo-right:hover {
+  border-color: rgba(26, 107, 255, 0.35);
+  box-shadow: 0 30px 60px rgba(26, 107, 255, 0.12);
+  transform: translateY(-4px) scale(1.01);
+}
+.hero-logo-right:hover img {
+  transform: scale(1.04);
+}
+.hero-logo-glow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, var(--blue-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Floating animation for relative layout flow */
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0) translateX(0);  }
+  50%       { transform: translateY(-8px) translateX(-3px); }
+}
+.hero-logo-right {
+  animation: floatLogo 5s ease-in-out infinite;
+}
